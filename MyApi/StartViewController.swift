@@ -7,13 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class StartViewController: UIViewController {    
+    @IBOutlet weak var titleAppView: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
-
+    
 
 }
+
 
