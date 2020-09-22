@@ -25,13 +25,13 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rqZ-yX-7ua">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BreAking BaD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-Jj-iU6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BreAking BaD" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Z8O-Jj-iU6" customClass="SpringLabel" customModule="Spring">
                                 <rect key="frame" x="16" y="80" width="343" height="175.5"/>
                                 <fontDescription key="fontDescription" name="HeartBreakingBad" family="Heart Breaking Bad" pointSize="84"/>
                                 <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-QY-Fs9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSW-QY-Fs9" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="150" y="299.5" width="75" height="40"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="28"/>
                                 <state key="normal" title="Let's go!">
@@ -57,7 +57,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="titleAppView" destination="Z8O-Jj-iU6" id="pZw-a8-BWr"/>
+                        <outlet property="button" destination="GSW-QY-Fs9" id="FbN-lN-GhM"/>
+                        <outlet property="titleLabel" destination="Z8O-Jj-iU6" id="C3X-9W-NE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,7 +96,7 @@
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="jNU-V4-kW2">
+                        <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" id="jNU-V4-kW2">
                             <rect key="frame" x="0.0" y="-44" width="375" height="667"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </activityIndicatorView>
@@ -131,6 +132,11 @@
                                         <constraint firstAttribute="bottom" secondItem="H4I-jb-Tl5" secondAttribute="bottom" constant="-0.5" id="ofK-An-sW9"/>
                                     </constraints>
                                 </collectionViewCellContentView>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="name" destination="QwQ-6g-AHC" id="PXX-1y-X7B"/>
                                     <outlet property="photo" destination="6xM-YR-SX1" id="Gbo-Dz-eTc"/>

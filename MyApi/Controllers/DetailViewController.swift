@@ -11,13 +11,13 @@ class DetailViewController: UIViewController {
     
     var image: UIImage?
     var text: String?
-
+    
     @IBOutlet weak var detailPhoto: UIImageView!
     @IBOutlet weak var detailAbout: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         detailPhoto.image = image
         detailAbout.text = text
     }

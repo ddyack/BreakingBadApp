@@ -20,7 +20,7 @@ class PersonListCollectionViewController: UICollectionViewController {
         activityIndicator.hidesWhenStopped = true
         
         networkManager.fetchPersons() { persons in
-                self.characters = persons
+            self.characters = persons
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
                 self.activityIndicator.stopAnimating()
@@ -29,11 +29,11 @@ class PersonListCollectionViewController: UICollectionViewController {
             }
         }
     }
-
-
+    
+    
     
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             let detailVC = segue.destination as! DetailViewController
@@ -43,24 +43,24 @@ class PersonListCollectionViewController: UICollectionViewController {
         }
     }
     
-
+    
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return characters.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PersonCell
-    
+        
         let character = characters[indexPath.item]
         cell.configure(with: character)
-    
+        
         return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
-
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
@@ -68,7 +68,7 @@ class PersonListCollectionViewController: UICollectionViewController {
 }
 
 extension PersonListCollectionViewController: UICollectionViewDelegateFlowLayout {
-
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemsPerRow: CGFloat = 2
         let paddingWidth = 20 * (itemsPerRow + 1)
