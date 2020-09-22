@@ -10,15 +10,22 @@ import UIKit
 class PersonListCollectionViewController: UICollectionViewController {
     let networkManager = NetworkManager()
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     private var characters: [PersonData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
         networkManager.fetchPersons() { persons in
                 self.characters = persons
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.activityIndicator.stopAnimating()
+                
+                
             }
         }
     }

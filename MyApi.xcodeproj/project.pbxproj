@@ -11,6 +11,8 @@
 		3741D7DF2518D07B00BCB414 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741D7DE2518D07B00BCB414 /* NetworkManager.swift */; };
 		3741D7E32518E74B00BCB414 /* PersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741D7E22518E74B00BCB414 /* PersonData.swift */; };
 		3741D7EC251A3F1D00BCB414 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3741D7EB251A3F1D00BCB414 /* DetailViewController.swift */; };
+		3741D7F2251A4DF500BCB414 /* breaking.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3741D7F1251A4DF500BCB414 /* breaking.otf */; };
+		3741D7FE251A54BE00BCB414 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3741D7FD251A54BE00BCB414 /* background.jpg */; };
 		37CA9CAD25180C0900B32DD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA9CAC25180C0900B32DD1 /* AppDelegate.swift */; };
 		37CA9CAF25180C0900B32DD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA9CAE25180C0900B32DD1 /* SceneDelegate.swift */; };
 		37CA9CB125180C0900B32DD1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CA9CB025180C0900B32DD1 /* StartViewController.swift */; };
@@ -25,6 +27,8 @@
 		3741D7DE2518D07B00BCB414 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3741D7E22518E74B00BCB414 /* PersonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonData.swift; sourceTree = "<group>"; };
 		3741D7EB251A3F1D00BCB414 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		3741D7F1251A4DF500BCB414 /* breaking.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = breaking.otf; sourceTree = "<group>"; };
+		3741D7FD251A54BE00BCB414 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		37CA9CA925180C0900B32DD1 /* MyApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CA9CAC25180C0900B32DD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37CA9CAE25180C0900B32DD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3741D7F0251A4DC700BCB414 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3741D7F1251A4DF500BCB414 /* breaking.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3741D801251A55BA00BCB414 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				37CA9CB525180C0B00B32DD1 /* Assets.xcassets */,
+				3741D7FD251A54BE00BCB414 /* background.jpg */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3741D803251A570D00BCB414 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				37CA9CD225181A4800B32DD1 /* PersonCell.swift */,
+				3741D7D92518CAB800BCB414 /* PersonListCollectionViewController.swift */,
+				37CA9CB025180C0900B32DD1 /* StartViewController.swift */,
+				3741D7EB251A3F1D00BCB414 /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3741D804251A575000BCB414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3741D7E22518E74B00BCB414 /* PersonData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3741D805251A582300BCB414 /* SupportingFilles */ = {
+			isa = PBXGroup;
+			children = (
+				37CA9CBA25180C0B00B32DD1 /* Info.plist */,
+				37CA9CAC25180C0900B32DD1 /* AppDelegate.swift */,
+				37CA9CAE25180C0900B32DD1 /* SceneDelegate.swift */,
+			);
+			path = SupportingFilles;
+			sourceTree = "<group>";
+		};
+		3741D806251A585700BCB414 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3741D7DE2518D07B00BCB414 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3741D807251A586A00BCB414 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				37CA9CB225180C0900B32DD1 /* Main.storyboard */,
+				37CA9CB725180C0B00B32DD1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		37CA9CA025180C0900B32DD1 = {
 			isa = PBXGroup;
 			children = (
@@ -66,18 +133,13 @@
 		37CA9CAB25180C0900B32DD1 /* MyApi */ = {
 			isa = PBXGroup;
 			children = (
-				37CA9CAC25180C0900B32DD1 /* AppDelegate.swift */,
-				37CA9CAE25180C0900B32DD1 /* SceneDelegate.swift */,
-				37CA9CB025180C0900B32DD1 /* StartViewController.swift */,
-				3741D7EB251A3F1D00BCB414 /* DetailViewController.swift */,
-				3741D7D92518CAB800BCB414 /* PersonListCollectionViewController.swift */,
-				3741D7DE2518D07B00BCB414 /* NetworkManager.swift */,
-				37CA9CB225180C0900B32DD1 /* Main.storyboard */,
-				37CA9CD225181A4800B32DD1 /* PersonCell.swift */,
-				3741D7E22518E74B00BCB414 /* PersonData.swift */,
-				37CA9CB525180C0B00B32DD1 /* Assets.xcassets */,
-				37CA9CB725180C0B00B32DD1 /* LaunchScreen.storyboard */,
-				37CA9CBA25180C0B00B32DD1 /* Info.plist */,
+				3741D807251A586A00BCB414 /* Storyboards */,
+				3741D806251A585700BCB414 /* Services */,
+				3741D805251A582300BCB414 /* SupportingFilles */,
+				3741D804251A575000BCB414 /* Models */,
+				3741D801251A55BA00BCB414 /* Sources */,
+				3741D7F0251A4DC700BCB414 /* Fonts */,
+				3741D803251A570D00BCB414 /* Controllers */,
 			);
 			path = MyApi;
 			sourceTree = "<group>";
@@ -141,7 +203,9 @@
 			files = (
 				37CA9CB925180C0B00B32DD1 /* LaunchScreen.storyboard in Resources */,
 				37CA9CB625180C0B00B32DD1 /* Assets.xcassets in Resources */,
+				3741D7FE251A54BE00BCB414 /* background.jpg in Resources */,
 				37CA9CB425180C0900B32DD1 /* Main.storyboard in Resources */,
+				3741D7F2251A4DF500BCB414 /* breaking.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +300,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MyApi/SupportingFilles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -291,6 +356,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MyApi/SupportingFilles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -307,7 +373,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyApi/Info.plist;
+				INFOPLIST_FILE = MyApi/SupportingFilles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,7 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MyApi/Info.plist;
+				INFOPLIST_FILE = MyApi/SupportingFilles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
