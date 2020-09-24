@@ -1,8 +1,14 @@
 PODS:
+  - Alamofire (5.2.2)
   - Spring (1.0.6)
 
 DEPENDENCIES:
+  - Alamofire (~> 5.2)
   - Spring (from `https://github.com/MengTo/Spring.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
 
 EXTERNAL SOURCES:
   Spring:
@@ -14,8 +20,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
 
-PODFILE CHECKSUM: d8fec533a7e1af68f97721eb31c52a4eda1d6f67
+PODFILE CHECKSUM: 1c346a77bc6297f24c4b0e645a23143cbe469888
 
 COCOAPODS: 1.9.3

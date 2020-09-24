@@ -5,13 +5,15 @@
 //  Created by ddyack on 21.09.2020.
 //
 import Foundation
+import Alamofire
 
 class NetworkManager {
     
-    private let stringURL = "https://www.breakingbadapi.com/api/characters"
+    private let charactersURL = "https://www.breakingbadapi.com/api/characters"
+    private let episodesURL = "https://breakingbadapi.com/api/episodes"
     
     func fetchPersons(clouser: @escaping ([PersonData]) -> Void) {
-        guard let personsURL = URL(string: stringURL) else { return }
+        guard let personsURL = URL(string: charactersURL) else { return }
         
         URLSession.shared.dataTask(with: personsURL) { (data, _, error) in
             if let error = error {
@@ -36,5 +38,32 @@ class NetworkManager {
             print(error.localizedDescription)
         }
         return nil
+    }
+    
+    func fetchEpisodes(completionHandler: @escaping ([EpisodeData]) -> Void) {
+        AF.request(episodesURL).validate().responseJSON { (dataResponse) in
+            var episodes: [EpisodeData] = []
+            
+            switch dataResponse.result {
+            case .success(let value):
+                
+                guard let episodesData = value as? [[String: Any]] else { return }
+                
+                for episodeData in episodesData {
+                    let episode = EpisodeData(episodeID: episodeData["episode_id"] as? Int,
+                                              title: episodeData["title"] as? String,
+                                              season: episodeData["season"] as? String,
+                                              airDate: episodeData["air_date"] as? String,
+                                              characters: episodeData["characters"] as? [String],
+                                              episode: episodeData["episode"] as? String,
+                                              series: episodeData["series"] as? Series)
+                    episodes.append(episode)
+                }
+                completionHandler(episodes)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }

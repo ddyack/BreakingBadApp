@@ -25,7 +25,6 @@ class PersonListCollectionViewController: UICollectionViewController {
                 self.collectionView.reloadData()
                 self.activityIndicator.stopAnimating()
                 
-                
             }
         }
     }
